@@ -1,0 +1,12 @@
+services:
+  mempool-proxy:
+      container_name: mempool-proxy
+      image: mempool-proxy:v1
+      restart: always
+      deploy:
+        resources:
+          limits:
+            memory: 100M
+
+      ports:
+        - 8000:8000
